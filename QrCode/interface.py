@@ -6,7 +6,7 @@ ctk.set_appearance_mode('dark')
 
 #janela ----------------------
 janela = ctk.CTk()
-janela.geometry('400x500')
+janela.geometry('400x520')
 janela.title('SISTEMA GERARDOR DE QRCODE')
 janela.resizable(False, False)
 #-----------------------------
@@ -26,13 +26,13 @@ def gerar_qrcode():
         resultado.configure(text= 'Digite um texto ou um PIX')
 
 #Elementos da janela ---------
-titulo = ctk.CTkLabel(janela, text= 'Sistema Gerador de QrCode', text_color= "#FFFFFF", font= ('Arial', 30))
+titulo = ctk.CTkLabel(janela, text='Gerador de QR Code', font=('Roboto', 24, 'bold'))
 titulo.pack(pady = 10)
 
-entrada = ctk.CTkEntry(janela, width= 300, height= 40, placeholder_text='Digite a URL ou o PIX', border_color= "#FFFFFF")
+entrada = ctk.CTkEntry(janela, width=320, height=45, placeholder_text='Digite a URL ou o PIX...', font=('Roboto', 14), corner_radius=8)
 entrada.pack(pady = 10)
 
-botao = ctk.CTkButton(janela, width= 100, height= 20, fg_color= "#FFFFFF", text='GERAR QRCODE', text_color= 'black', hover_color= "#A7A1A1", cursor= 'hand2', command= gerar_qrcode)
+botao = ctk.CTkButton(janela, text='GERAR QR CODE', width=320, height=45, font=('Roboto', 14, 'bold'), cursor='hand2', corner_radius=8, command=gerar_qrcode, fg_color= "#f896f8", hover_color="#f346f3")
 botao.pack()
 
 resultado = ctk.CTkLabel(janela, text= '')
